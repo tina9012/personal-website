@@ -1,0 +1,28 @@
+.hero{
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  background-color: rgb(251, 244, 244);
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'DM Mono', sans-serif;
+  color: black;
+  max-width: 70vh;
+  width: 100;
+}
+
+.content img{
+  max-width:100%;
+}
+
+.content h1{
+  font-weight: 400;
+  font-size: 25px;
+}
