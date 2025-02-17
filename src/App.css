@@ -1,11 +1,29 @@
+body {
+  /* diameter of the circle */
+  --d: 1px; 
+
+  background: radial-gradient(
+      circle at var(--d) var(--d),
+      #000 calc(var(--d) - 1px),
+      #0000 var(--d)
+    )
+    0 0 / 20px 20px;
+}
+
+
 .hero{
   display: flex;
   height: 100vh;
-  flex-direction: row;
-  background-color: rgb(251, 244, 244);
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   
+}
+
+@media (min-width: 500px) { /* Adjust breakpoint as needed */
+  .container {
+    flex-direction: row; /* Switch to row layout on larger screens */
+  }
 }
 
 .content{
@@ -17,6 +35,29 @@
   max-width: 70vh;
   width: 100;
 }
+
+.highlightWaterloo {
+  background-color: rgb(255, 255, 113);
+  padding: 0px 0px;
+  border-radius: 0px;
+}
+
+.highlightShopify{
+  background-color: rgb(130, 255, 134);
+  padding: 0px 0px;
+  border-radius: 0px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.underline{
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 63, 63);
+  text-decoration-thickness: 3px;
+}
+
 
 .content img{
   max-width:100%;
