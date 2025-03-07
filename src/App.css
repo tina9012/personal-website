@@ -1,70 +1,58 @@
-body {
-  /* diameter of the circle */
-  --d: 1px; 
-
-  background: radial-gradient(
-      circle at var(--d) var(--d),
-      #000 calc(var(--d) - 1px),
-      #0000 var(--d)
-    )
-    0 0 / 20px 20px;
-}
-
-
-.hero{
-  display: flex;
-  height: 100vh;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-}
-
-.content{
+/* Reset and center the entire page */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'DM Mono', sans-serif;
-  color: black;
-  max-width: 70vh;
-  
 }
 
-.highlightWaterloo {
-  background-color: rgb(209, 231, 255);
-  padding: 2px 3px;
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  /* Use a viewport-based width/height or adjust as needed */
+  width: 90vw;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red; /* For debugging */
 }
 
-.shopify{
-  background-color: rgb(255, 249, 181);
-  padding: 2px 3px;
-  
+/* Content box inside hero */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid blue;  /* Debugging border */
 }
 
-.ibm{
-  background-color: rgb(187, 232, 197);
-  padding: 2px 3px;
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  gap: 20px;
+  border: 1px solid orange;  /* Debugging border */
 }
 
-
-
-.bold{
-  font-weight: italic;
-  color: rgb(36, 58, 146);
+.row {
+  display: flex;
+  gap: 20px;              /* Space between images within the row */
+  justify-content: center;
+  object-fit: cover;
 }
 
-.underline{
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+.row img {
+  max-width: 100%;
+  height: auto;
+  min-width: 0; 
 }
 
-
-.content img{
-  max-width:100%;
-}
-
-.content h1{
-  font-size: 22px;
-  line-height: 1.5;
-  font-weight: 400;
+.content img {
+  max-width: 100%;
+  object-fit: cover;
 }
